@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\DermalRegenerator.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\DermalRegenerator.pdb
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.pdb
