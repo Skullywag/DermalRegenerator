@@ -14,8 +14,8 @@ namespace DermalRegenerator
     class Building_DermalRegeneratorNew : Building
     {
         private int count = 0;
-        private Pawn JobPawn;
-        private Pawn OwnerPawn;
+        private Pawn JobPawn = null;
+        private Pawn OwnerPawn = null;
         private int oldCount = 0;
         private Hediff foundInj = null;
         private Job job1 = new Job();
