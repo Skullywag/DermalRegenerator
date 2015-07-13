@@ -153,7 +153,7 @@ namespace DermalRegenerator
             if (OwnerPawn != null)
             {
                 int scanpercent = count / 150;
-                int healpercent = (count - 15000) / 300;
+                int healpercent = (count - 15000) / 150;
                 if (count == 0)
                 {
                     stringBuilder.AppendLine("Waiting for patient.");
