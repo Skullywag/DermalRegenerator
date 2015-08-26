@@ -69,8 +69,8 @@ namespace DermalRegenerator
                     {
                         job1 = new Job(JobDefOf.Goto, this.InteractionCell);
                         job2 = new Job(JobDefOf.Wait, 30100);
-                        myPawn.playerController.TakeOrderedJob(job1);
-                        myPawn.playerController.QueueJob(job2);
+                        myPawn.drafter.TakeOrderedJob(job1);
+                        myPawn.drafter.pawn.QueueJob(job2);
                         JobPawn = myPawn;
                         myPawn.Reserve(this);
                     };
@@ -275,7 +275,7 @@ namespace DermalRegenerator
                     OwnerPawn.health.hediffSet.hediffs.Remove(foundInj);
                     OwnerPawn.health.Notify_HediffChanged(foundInj);
                     foundInj = null;
-                    if (!OwnerPawn.health.ShouldGetTreatment)
+                    if (!OwnerPawn.health.ShouldBeTreatedNow)
                     {
                         string messageText4;
                         messageText4 = "Treatment complete.";

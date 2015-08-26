@@ -47,7 +47,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building_DermalRegenerator.cs" />
     <Compile Include="Building_DermalRegeneratorNew.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
