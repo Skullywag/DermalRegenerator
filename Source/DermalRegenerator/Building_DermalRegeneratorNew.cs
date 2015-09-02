@@ -68,7 +68,7 @@ namespace DermalRegenerator
                     Action action = delegate
                     {
                         job1 = new Job(JobDefOf.Goto, this.InteractionCell);
-                        job2 = new Job(JobDefOf.Wait, 30100);
+                        job2 = new Job(JobDefOf.Wait, 18100);
                         myPawn.drafter.TakeOrderedJob(job1);
                         myPawn.drafter.pawn.QueueJob(job2);
                         JobPawn = myPawn;
@@ -152,13 +152,13 @@ namespace DermalRegenerator
             }
             if (OwnerPawn != null)
             {
-                int scanpercent = count / 150;
-                int healpercent = (count - 15000) / 150;
+                int scanpercent = count / 90;
+                int healpercent = (count - 9000) / 90;
                 if (count == 0)
                 {
                     stringBuilder.AppendLine("Waiting for patient.");
                 }
-                else if (count <= 15000)
+                else if (count <= 9000)
                 {
                     stringBuilder.AppendLine("Scanning... Total Progress: " + scanpercent + "%");
                 }
@@ -236,7 +236,7 @@ namespace DermalRegenerator
             if (OwnerPawn != null && OwnerPawn.Position == this.InteractionCell && this.UsableNow)
             {
                 Find.GlowGrid.VisualGlowAt(Position);
-                if (count < 15000)
+                if (count < 9000)
                 {
                     if (count % 90 == 0)
                     {
@@ -247,7 +247,7 @@ namespace DermalRegenerator
                         ThrowLightningGlowBlue(Position.ToVector3(), 1f);
                     }
                 }
-                else if (count > 15000)
+                else if (count > 9000)
                 {
                     if (count % 90 == 0)
                     {
@@ -270,7 +270,7 @@ namespace DermalRegenerator
                     }
                 }
 
-                if (count >= 30000)
+                if (count >= 18000)
                 {
                     OwnerPawn.health.hediffSet.hediffs.Remove(foundInj);
                     OwnerPawn.health.Notify_HediffChanged(foundInj);
@@ -291,7 +291,7 @@ namespace DermalRegenerator
                     }
                 }
 
-                if (count == 15000)
+                if (count == 9000)
                 {
                     if (foundInj == null)
                     {
