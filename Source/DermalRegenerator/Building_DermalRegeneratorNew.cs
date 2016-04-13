@@ -161,6 +161,7 @@ namespace DermalRegenerator
                 else if (count <= 9000)
                 {
                     stringBuilder.AppendLine("Scanning... Total Progress: " + scanpercent + "%");
+                    // TODO possibly change this to current stage percent AND total percent.
                 }
                 else
                 {
@@ -263,7 +264,7 @@ namespace DermalRegenerator
 
                 foreach (Hediff current in OwnerPawn.health.hediffSet.GetHediffs<Hediff>())
                 {
-                    if (current is Hediff_Injury && current.IsOld() && current.Label.Contains("scar"))
+                    if (current is Hediff_Injury && current.IsOld() && (current.Label.Contains("scar") || current.Label.Contains("Scar")))
                     {
                         oldCount++;
                         foundInj = current;
@@ -275,7 +276,7 @@ namespace DermalRegenerator
                     OwnerPawn.health.hediffSet.hediffs.Remove(foundInj);
                     OwnerPawn.health.Notify_HediffChanged(foundInj);
                     foundInj = null;
-                    if (!OwnerPawn.health.ShouldBeTreatedNow)
+                    if (!OwnerPawn.health.ShouldBeTendedNow)
                     {
                         string messageText4;
                         messageText4 = "Treatment complete.";

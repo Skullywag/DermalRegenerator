@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+ 
+	<ResearchProjectDef>
+		<defName>DermalRegenerator</defName>
+		<label>dermal regeneration</label>
+		<description>All those scars and lacerations can be easily healed given we can acquire the materials needed to build a regenerator.</description>
+		<totalCost>1200</totalCost>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

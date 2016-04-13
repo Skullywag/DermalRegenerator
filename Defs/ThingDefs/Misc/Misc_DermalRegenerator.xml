@@ -3,6 +3,7 @@
 
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
+    <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <selectable>true</selectable>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -44,26 +45,31 @@
     <costList>
       <Steel>250</Steel>
       <Gold>10</Gold>
+      <Components>10</Components>
     </costList>
     <killedLeavings>
       <ChunkSlagSteel>1</ChunkSlagSteel>
     </killedLeavings>
     <filthLeaving>BuildingRubble</filthLeaving>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <startElectricalFires>true</startElectricalFires>
         <basePowerConsumption>600</basePowerConsumption>
       </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>DermalRegenerator</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Buildings>
