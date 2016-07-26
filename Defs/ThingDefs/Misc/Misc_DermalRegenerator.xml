@@ -22,8 +22,7 @@
       <drawsize>3,3</drawsize>
     </graphicData>
     <thingClass>DermalRegenerator.Building_DermalRegeneratorNew</thingClass>
-    <!--<researchPrerequisite>CryptoHeal</researchPrerequisite>-->
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>Standable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
@@ -38,14 +37,11 @@
     <designationCategory>Misc</designationCategory>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,0)</interactionCellOffset>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
     <rotatable>false</rotatable>
     <costList>
       <Steel>250</Steel>
       <Gold>10</Gold>
-      <Components>10</Components>
+      <Component>10</Component>
     </costList>
     <killedLeavings>
       <ChunkSlagSteel>1</ChunkSlagSteel>

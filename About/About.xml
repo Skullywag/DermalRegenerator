@@ -2,6 +2,6 @@
 <ModMetaData>
 	<name>DermalRegenerator</name>
 	<author>Skullywag</author>
-	<targetVersion>Alpha 13</targetVersion>
+	<targetVersion>0.14.1234</targetVersion>
 	<description>Adds a machine with the ability to repair skin damage.</description>
 </ModMetaData>

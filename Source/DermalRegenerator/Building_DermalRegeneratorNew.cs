@@ -160,12 +160,12 @@ namespace DermalRegenerator
                 }
                 else if (count <= 9000)
                 {
-                    stringBuilder.AppendLine("Scanning... Total Progress: " + scanpercent + "%");
+                    stringBuilder.AppendLine("Scanning... Progress: " + scanpercent + "%");
                     // TODO possibly change this to current stage percent AND total percent.
                 }
                 else
                 {
-                    stringBuilder.AppendLine("Treating... Total Progress: " + healpercent + "%");
+                    stringBuilder.AppendLine("Treating... Progress: " + healpercent + "%");
                 }
             }
             return stringBuilder.ToString();
