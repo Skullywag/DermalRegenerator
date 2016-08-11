@@ -12,7 +12,7 @@
     <comps>
       <li>
         <compClass>HediffComp_Disappears</compClass>
-        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <disappearsAfterTicks>40000</disappearsAfterTicks>
       </li>
     </comps>
     <stages>
