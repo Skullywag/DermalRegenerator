@@ -58,3 +58,24 @@ C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\DermalRegenerato
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.csprojResolveAssemblyReference.cache
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.dll
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\DermalRegenerator.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\DermalRegenerator.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DermalRegenerator\Source\DermalRegenerator\obj\Debug\DermalRegenerator.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\DermalRegenerator.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\DermalRegenerator.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\Assembly-CSharp.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\UnityEngine.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\NAudio.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\NVorbis.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\bin\Debug\UnityEngine.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\obj\Debug\DermalRegenerator.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\obj\Debug\DermalRegenerator.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DermalRegenerator-A16\Source\DermalRegenerator\obj\Debug\DermalRegenerator.pdb
