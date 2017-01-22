@@ -35,9 +35,9 @@ namespace DermalRegenerator
             base.ExposeData();
         }
 
-        public override void SpawnSetup()
+        public override void SpawnSetup(Map map)
         {
-            base.SpawnSetup();
+            base.SpawnSetup(map);
             this.powerComp = base.GetComp<CompPowerTrader>();
         }
 
@@ -69,7 +69,7 @@ namespace DermalRegenerator
                     {
                         job1 = new Job(JobDefOf.Goto, this.InteractionCell);
                         job2 = new Job(JobDefOf.Wait, 9100);
-                        myPawn.drafter.TakeOrderedJob(job1);
+                        myPawn.jobs.TryTakeOrderedJob(job1);
                         myPawn.drafter.pawn.QueueJob(job2);
                         JobPawn = myPawn;
                         myPawn.Reserve(this);
@@ -80,66 +80,66 @@ namespace DermalRegenerator
             return list;
         }
 
-        public static void ThrowMicroSparksGreen(Vector3 loc)
+        public static void ThrowMicroSparksGreen(Vector3 loc, Map map)
         {
-            if (!loc.ShouldSpawnMotesAt() || MoteCounter.Saturated)
+            if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
             {
                 return;
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_HealGreen"), null);
-            moteThrown.ScaleUniform = Rand.Range(1.2f, 1.5f);
+            moteThrown.Scale = Rand.Range(1.2f, 1.5f);
             //moteThrown.exactRotationRate = Rand.Range(0f, 0f);
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition += new Vector3(0.5f, 0f, 0.5f);
             //moteThrown.exactPosition += new Vector3(Rand.Value, 0f, Rand.Value);
-            moteThrown.SetVelocityAngleSpeed((float)Rand.Range(0, 2), Rand.Range(0.003f, 0.003f));
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3());
+            moteThrown.SetVelocity((float)Rand.Range(0, 2), Rand.Range(0.003f, 0.003f));
+            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 
-        public static void ThrowMicroSparksBlue(Vector3 loc)
+        public static void ThrowMicroSparksBlue(Vector3 loc, Map map)
         {
-            if (!loc.ShouldSpawnMotesAt() || MoteCounter.Saturated)
+            if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
             {
                 return;
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_ScanBlue"), null);
-            moteThrown.ScaleUniform = Rand.Range(1.2f, 1.5f);
+            moteThrown.Scale = Rand.Range(1.2f, 1.5f);
             //moteThrown.exactRotationRate = Rand.Range(0f, 0f);
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition += new Vector3(0.5f, 0f, 0.5f);
             //moteThrown.exactPosition += new Vector3(Rand.Value, 0f, Rand.Value);
-            moteThrown.SetVelocityAngleSpeed((float)Rand.Range(0, 2), Rand.Range(0.003f, 0.003f));
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3());
+            moteThrown.SetVelocity((float)Rand.Range(0, 2), Rand.Range(0.003f, 0.003f));
+            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 
-        public static void ThrowLightningGlowBlue(Vector3 loc, float size)
+        public static void ThrowLightningGlowBlue(Vector3 loc, Map map, float size)
         {
-            if (!loc.ShouldSpawnMotesAt())
+            if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
             {
                 return;
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("Mote_LightningGlowBlue", true), null);
-            moteThrown.ScaleUniform = 6f * size;
-            moteThrown.exactRotationRate = 0f;
+            moteThrown.Scale = 6f * size;
+            moteThrown.rotationRate = 0f;
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition += new Vector3(0.5f, 0f, 0.5f);
             //moteThrown.SetVelocityAngleSpeed((float)Rand.Range(0, 0), Rand.Range(0.0002f, 0.0002f));
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3());
+            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 
-        public static void ThrowLightningGlowGreen(Vector3 loc, float size)
+        public static void ThrowLightningGlowGreen(Vector3 loc, Map map, float size)
         {
-            if (!loc.ShouldSpawnMotesAt())
+            if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
             {
                 return;
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("Mote_LightningGlowGreen", true), null);
-            moteThrown.ScaleUniform = 6f * size;
-            moteThrown.exactRotationRate = 0f;
+            moteThrown.Scale = 6f * size;
+            moteThrown.rotationRate = 0f;
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition += new Vector3(0.5f, 0f, 0.5f);
             //moteThrown.SetVelocityAngleSpeed((float)Rand.Range(0, 0), Rand.Range(0.0002f, 0.0002f));
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3());
+            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 
         public override string GetInspectString()
@@ -236,27 +236,27 @@ namespace DermalRegenerator
             }
             if (OwnerPawn != null && OwnerPawn.Position == this.InteractionCell && this.UsableNow)
             {
-                Find.GlowGrid.VisualGlowAt(Position);
+                Map.glowGrid.VisualGlowAt(Position);
                 if (count < 4500)
                 {
                     if (count % 90 == 0)
                     {
-                        ThrowMicroSparksBlue(Position.ToVector3());
+                        ThrowMicroSparksBlue(Position.ToVector3(), Map);
                     }
                     if (count % 200 == 0)
                     {
-                        ThrowLightningGlowBlue(Position.ToVector3(), 1f);
+                        ThrowLightningGlowBlue(Position.ToVector3(), Map, 1f);
                     }
                 }
                 else if (count > 4500)
                 {
                     if (count % 90 == 0)
                     {
-                        ThrowMicroSparksGreen(Position.ToVector3());
+                        ThrowMicroSparksGreen(Position.ToVector3(), Map);
                     }
                     if (count % 200 == 0)
                     {
-                        ThrowLightningGlowGreen(Position.ToVector3(), 1f);
+                        ThrowLightningGlowGreen(Position.ToVector3(), Map, 1f);
                     }
                 }
 
@@ -276,7 +276,7 @@ namespace DermalRegenerator
                     OwnerPawn.health.hediffSet.hediffs.Remove(foundInj);
                     OwnerPawn.health.Notify_HediffChanged(foundInj);
                     foundInj = null;
-                    if (!OwnerPawn.health.ShouldBeTendedNow)
+                    if (!HealthAIUtility.ShouldBeTendedNow(OwnerPawn))
                     {
                         string messageText4;
                         messageText4 = "Treatment complete.";
